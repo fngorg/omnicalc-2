@@ -1,16 +1,20 @@
 Rails.application.routes.draw do
 
-  get("/addition/new", { :controller => "math", :action => "addition_form"})
+  get("/add", { :controller => "application", :action => "addition_form"})
 
-  get("/addition/results", { :controller => "math", :action => "calculate_addition"})
+  get("/addition/results", { :controller => "application", :action => "calculate_addition"})
 
-  get("/substraction/new", { :controller => "math", :action => "substraction_form"})
+  get("/subtract", { :controller => "application", :action => "subtraction_form"})
 
-  get("/substraction/results", { :controller => "math", :action => "calculate_substraction"})
+  get("/subtraction/results", { :controller => "application", :action => "calculate_subtraction"})
 
-  get("/multiplication/new", { :controller => "math", :action => "multiplication_form"})
+  get("/multiply", { :controller => "application", :action => "multiplication_form"})
 
-  get("/multiplication/results", { :controller => "math", :action => "calculate_multiplication"})
+  get("/multiplication/results", { :controller => "application", :action => "calculate_multiplication"})
+  
+  get("/divide", { :controller => "application", :action => "division_form"})
+
+  get("/division/results", { :controller => "application", :action => "calculate_division"})
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
